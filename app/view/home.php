@@ -4,9 +4,11 @@
     <h1>Todo List</h1>
     <h3>Tasks : </h3>
 
-    <?php foreach ($results as $result) {?>
-        <p><?= $result['content']; ?></p>
-    <?php } ?>
+    <ul>
+        <?php foreach ($results as $result) { ?>
+            <li><?= $result['content']; ?></li>
+        <?php } ?>
+    </ul>
 </div>
 
 <?php include 'footer.html'; ?>
