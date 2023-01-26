@@ -12,7 +12,7 @@ class ModelDB extends PDO
     //Singleton
     public static function getInstance()
     {
-        include_once '../controller/config.php';
+        include '../controller/config.php';
 
         $options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
 
