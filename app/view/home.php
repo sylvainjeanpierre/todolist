@@ -4,8 +4,9 @@
     <h1>Todo List</h1>
 
     <h2>New task</h2>
-    <form action="/.php">
+    <form action="router.php" method="get">
         <label for="new_task"></label>
+        <input type="hidden" name="action" value="addTask">
         <input type="text" id="new_task" name="content"><br>
         <input type="submit" value="Save">
     </form>

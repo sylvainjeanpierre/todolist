@@ -16,22 +16,17 @@ class Controller
 
     /*
     * Add a task
-    * POST request
     */
     public static function addTask()
     {
-        if ($_SERVER['REQUEST_METHOD'] != 'POST') {
+        include 'config.php';
+        if (!isset($_GET['content']) || empty($_GET['content'])) {
             Controller::home();
             return;
         }
-        
-        if (!isset($_POST['content']) || empty($_POST['content'])) {
-            Controller::home();
-            return;
-        }
-        $content = $_POST['content'];
+        $content = $_GET['content'];
         Model::addTask($content);
-        header('Location: index.php?action=home');
+        header('Location: router.php?action=home');
     }
 }
 
