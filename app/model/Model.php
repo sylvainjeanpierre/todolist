@@ -13,4 +13,13 @@ class Model {
         $statement->closeCursor();
         return $results;
     }
+
+    public static function addTask($content) {
+        $db = ModelDB::getInstance();
+        $query = "INSERT INTO tasks (content) VALUES (:content)";
+        $statement = $db->prepare($query);
+        $statement->bindValue(':content', $content);
+        $statement->execute();
+        $statement->closeCursor();
+    }
 }
