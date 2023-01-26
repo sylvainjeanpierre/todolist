@@ -1,2 +1,2 @@
 # todolist
-Project made in 1 hour
+To do list project
