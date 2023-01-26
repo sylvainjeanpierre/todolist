@@ -1,6 +1,6 @@
 <?php include 'header.html'; ?>
 
-<div>
+<div class="base">
     <h1>Todo List</h1>
 
     <h2>New task</h2>
@@ -8,7 +8,7 @@
         <label for="new_task"></label>
         <input type="hidden" name="action" value="addTask">
         <input type="text" id="new_task" name="content"><br>
-        <input type="submit" value="Save">
+        <input type="submit" value="Insert">
     </form>
 
 
