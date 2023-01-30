@@ -16,7 +16,14 @@
 
     <ul>
         <?php foreach ($results as $result) { ?>
-            <li><?= $result['content']; ?></li>
+            <li>
+                <?= $result['content']; ?>
+                <form action="router.php" method="get">
+                    <input type="hidden" name="action" value="deleteTask">
+                    <input type="hidden" name="id" value="<?= $result['id'];?>">
+                    <input type="submit" value="Delete">
+                </form>
+            </li>
         <?php } ?>
     </ul>
 </div>

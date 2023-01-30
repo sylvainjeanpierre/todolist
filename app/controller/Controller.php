@@ -28,6 +28,21 @@ class Controller
         Model::addTask($content);
         header('Location: router.php?action=home');
     }
+
+    /*
+    * Delete a task
+    */
+    public static function deleteTask()
+    {
+        include 'config.php';
+        if (!isset($_GET['id']) || empty($_GET['id'])) {
+            Controller::home();
+            return;
+        }
+        $id = $_GET['id'];
+        Model::deleteTask($id);
+        header('Location: router.php?action=home');
+    }
 }
 
 ?>

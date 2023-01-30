@@ -22,4 +22,13 @@ class Model {
         $statement->execute();
         $statement->closeCursor();
     }
+
+    public static function deleteTask($id) {
+        $db = ModelDB::getInstance();
+        $query = "DELETE FROM tasks WHERE id=:id";
+        $statement = $db->prepare($query);
+        $statement->bindValue(':id', $id);
+        $statement->execute();
+        $statement->closeCursor();
+    }
 }
