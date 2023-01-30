@@ -24,7 +24,7 @@ class Controller
             Controller::home();
             return;
         }
-        $content = $_GET['content'];
+        $content = htmlspecialchars($_GET['content']);
         Model::addTask($content);
         header('Location: router.php?action=home');
     }
@@ -39,7 +39,15 @@ class Controller
             Controller::home();
             return;
         }
-        $id = $_GET['id'];
+        $id = htmlspecialchars($_GET['id']);
+
+        //check if the value is an integer
+        if (!ctype_digit($id)) {
+            Controller::home();
+            return;
+        }
+
+        $id = intval($id);
         Model::deleteTask($id);
         header('Location: router.php?action=home');
     }
