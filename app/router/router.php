@@ -16,6 +16,7 @@ $args = $param;
 switch ($action) {
   case "home":
   case "addTask":
+  case "deleteTask":
     Controller::$action($args);
     break;
   
