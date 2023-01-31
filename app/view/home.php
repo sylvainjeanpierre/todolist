@@ -21,7 +21,7 @@
                 <form action="router.php" method="get">
                     <input type="hidden" name="action" value="deleteTask">
                     <input type="hidden" name="id" value="<?= $result['id'];?>">
-                    <input type="submit" value="Delete">
+                    <input type="image" alt="Delete" src="../../public/trash-347.png">
                 </form>
             </li>
         <?php } ?>
