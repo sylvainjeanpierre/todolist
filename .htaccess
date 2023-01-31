@@ -1,0 +1,3 @@
+<ifDefine Free>
+ php56 1
+</ifDefine>
