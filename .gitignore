@@ -1,0 +1,2 @@
+#ignore config.php file
+app/controller/config.php
